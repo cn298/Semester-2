@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Index Page{% endblock %}
+{% block content %}
+<div class="container-fluid">
+	<div class="jumbotron">
+		{% for post in posts %}
+			<h1>{{ post.title }}</h1>
+			<p>
+				{{ post.description }}
+			</p>
+		<hr>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}
